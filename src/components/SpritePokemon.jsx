@@ -9,21 +9,19 @@ export function SpritePokemon(props){
 
     useEffect(()=>{
         getSprite()
-    }, [])
+    }, [props.url])
 
     function getSprite(){
-
         let response = axios.get(props.url).then((res)=>{
-            console.log(res.data.sprites.versions.generation-v)
-            renderSprite(res.data.sprites)
-        })
-        
-        
+            const spritesGenerationV = res.data.sprites.versions["generation-v"];
+            const spritesBlackWhite = spritesGenerationV["black-white"].animated;
+            renderSprite(spritesBlackWhite)
+            console.log(spritesBlackWhite)
+        })     
     } 
 
     function renderSprite(response){
         setSprite(response)
-
     }
     return(
         <>

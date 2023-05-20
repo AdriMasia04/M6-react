@@ -41,7 +41,6 @@ export function Register() {
     
     return (
         <>
-
             <div className="registerContainer" >
                 <div className="card border border-info" style={{backgroundImage: `url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc6H0cE6t8bmRtmokjcDE-tJ1xAJAq9VeKG-jmdzAQB14oAcUc8fyI1Ue3RkvgccbnPac&usqp=CAU)`}}>
                 <h2 style={{color: "goldenrod"}}>REGISTER</h2> 
