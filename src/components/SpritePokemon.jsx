@@ -16,7 +16,7 @@ export function SpritePokemon(props){
             const spritesGenerationV = res.data.sprites.versions["generation-v"];
             const spritesBlackWhite = spritesGenerationV["black-white"].animated;
             renderSprite(spritesBlackWhite)
-            console.log(spritesBlackWhite)
+            console.log(res)
         })     
     } 
 

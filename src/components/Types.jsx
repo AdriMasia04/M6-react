@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { render } from "react-dom";
 import axios from 'axios';
+import { TableTypes } from './TableTypes';
 
 
 export function Types(props) {
     const [types, setTypes] = useState(null);
     const [error, setError] = useState(null);  
-   
+    
 
     useEffect(() => {
         getTypes();
@@ -39,7 +40,7 @@ export function Types(props) {
                         <div class="card-body">
                             <h5 key={index} class="card-title"></h5>
                             <h3>{types.type.name}</h3>
-                            <p class="card-text">Aqui me gustaria meter una tabla de tipos para ese tipo</p>
+                            <TableTypes url={types}/>
                         </div>
                     </div>
                 )

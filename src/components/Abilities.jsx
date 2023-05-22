@@ -14,7 +14,7 @@ export function Abilities(props) {
         let response = axios.get(props.url)
             .then((res) => {
                 renderAbilities(res.data.abilities)
-                console.log(abilities) 
+                // console.log(abilities) 
                 
             })
 
@@ -22,6 +22,7 @@ export function Abilities(props) {
 
     function renderAbilities(response) {
         setAbilities(response);
+        // console.log(abilities)
     }
 
     if (error) {
